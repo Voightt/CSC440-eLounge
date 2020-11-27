@@ -26,6 +26,10 @@ CREATE TABLE `Students` (
   `idStudents` int NOT NULL,
   `firstName` varchar(45) DEFAULT NULL,
   `lastName` varchar(45) DEFAULT NULL,
+  `major` varchar(45) DEFAULT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL,
+  `clubName` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`idStudents`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
