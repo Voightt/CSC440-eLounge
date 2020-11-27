@@ -26,6 +26,8 @@ CREATE TABLE `Faculty` (
   `idFaculty` int NOT NULL,
   `firstName` varchar(45) DEFAULT NULL,
   `lastName` varchar(45) DEFAULT NULL,
+  `deptName` varchar(25) DEFAUL NULL,
+  `email` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`idFaculty`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
