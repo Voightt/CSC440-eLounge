@@ -1,0 +1,214 @@
+*
+{
+    
+    padding: 0;
+    margin: 0;
+    font-family: Ubuntu, Arial, sans-serif;
+    
+}
+
+:root
+{
+    --primary: #ffb500;
+    --secondary: #4f2c1d;
+}
+
+@font-face
+{
+    
+    font-family: Ubuntu; src: url('Ubuntu-M.ttf');
+    
+}
+
+.top-of-page
+{
+    text-align: center;
+}
+
+.top-bg
+{
+    background-image: linear-gradient(
+        to bottom,
+        var(--secondary),
+        var(--primary)
+    );
+}
+
+#homepage-head
+{
+    font-size: 80px;
+    letter-spacing: 4px;
+    padding: 40px 40px 0px 40px;
+    color: white;
+}
+
+#homepage-subhead
+{
+    font-size: 32px;
+    padding: 0px 40px 40px 40px;
+    color: white;
+}
+
+#adelphi-logo
+{
+    float: left;
+    width: 400px;
+    height: 150px;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+#elounge-logo
+{
+    float: right;
+    width: 400px;
+    height: 150px;
+    margin-top: 25px;
+    margin-right: 40px;
+}
+
+
+.intro-form
+{
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;    
+}
+
+#intro-text
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    padding: 90px;
+    font-size: 34px;
+    width: 50%;
+    color: black;
+    
+}
+
+.first-container
+{
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    text-align: center;
+    color: black;
+    margin-top: -50px;
+}
+
+#first-name
+{
+    margin-left: 50px;
+}
+
+#last-name
+{
+    margin-left: 52px;
+}
+
+#school-email
+{
+    margin-left: 26px;
+}
+
+.second-container
+{
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    text-align: center;
+    color: black;
+}
+
+.third-container
+{
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    text-align: center;
+    color: black;
+}
+
+.leftside, .rightside 
+{
+    
+    height: 100vh;
+    width: 100%;
+
+}
+
+.leftside
+{
+    background-color: #f5f5f5;
+    text-align: center;
+    
+}
+
+.rightside
+{
+    background-color: #f5f5f5;    
+    text-align: center;
+
+}
+
+#Major-select
+{
+    margin: 50px;
+    font-size: 40px;
+    width: 700px;
+}
+
+#minor-label
+{
+    font-size: 30px;
+}
+
+#multiple-label
+{
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+#minor-check
+{
+    transform: scale(1.5);
+}
+
+#Minor-select
+{
+    margin: 0 50px 50px 50px;
+    font-size: 40px;
+    width: 700px;
+}
+
+#multiple-club-check
+{
+    transform: scale(1.5);
+}
+
+#Club-select
+{
+    font-size: 35px;
+    width: 900px;
+}
+
+.selected-form
+{
+    padding: 50px;
+    font-size: 30px;
+}
+
+#hide-list
+{
+    display: none;
+}
+
+#submit
+{
+    font-size: 40px;
+    margin-top: 25px;
+}
