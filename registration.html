@@ -54,7 +54,6 @@
                 }
             }
             
-            
         </script>
         
         
@@ -70,7 +69,7 @@
             <img src = "images/Adelphi_Wordmark_gold.png" id = "adelphi-logo">
             </a>
             
-            <img src = "images/elounge-logo.png" id = "elounge-logo">
+            <img src = "images/elounge-logo%20copy.png" id = "elounge-logo">
                   
                 <div class = "text-bg">
                 
@@ -155,10 +154,10 @@
                 <div class = "col no-gutters">
             
                     <div class = "leftside">
-                
+                        
+                        <p id = "major-header">Select your major:</p>
                     <select id = "Major-select" onchange ="getValueMajor()" size = "7">
                         
-                        <option value = "">Select your major:</option>
                         <option value ="Undeclared">Undeclared</option>
                         <option value ="Accounting">Accounting</option>
                         <option value ="Adolescenet-Childhood Education">Adolescenet/Childhood Education</option>
@@ -232,7 +231,6 @@
                 
                     <select id = "Minor-select" onchange ="getValueMinor()" size = "7">
                         
-                        <option value = "">Select your Second Major/Minor:</option>
                         <option value ="Accounting">Accounting</option>
                         <option value ="Adolescenet-Childhood Education">Adolescenet/Childhood Education</option>
                         <option value = "African-Black-and-Caribbean-Studies">African, Black & Caribbean Studies</option>
@@ -318,14 +316,14 @@
                 
                     <div class = "rightside">
                 
-                        <input type = "checkbox" id = "multiple-club-check" onclick = "multipleFunc()">
-                <label for="multiple-club-check" id = "multiple-label">Multiple organizations?</label>
+                        <p id = "club-header">Select your organizations you are in/are interested in:</p>
+                        
+                <label id = "multiple-label">*For multiple organizations you are in/are interested in, hold CTRL.</label>
                 
                 <br>
                 
-                <select id = "Club-select" onchange ="getValueClub()" size = "7">
+                <select id = "Club-select" onchange ="getValueClub()" size = "7" multiple = "multiple">
         
-                    <option value = "">Select your organizations you are in/are interested in:</option>
                     <option value ="Accounting-Society">Accounting Society</option>
                     <option value ="Adelphi-Christian-Fellowship">Adelphi Christian Fellowship</option>
                     <option value ="Adelphi-College-Republicans-National-Committee-Chapter">Adelphi College Republicans National Committee Chapter</option>
@@ -444,9 +442,9 @@
                             <input type = "text" id = "minor" placeholder = "Minor" disabled = "disabled">
                 
                         <br>
-                
+                            
                             <input type = "text" id = "club" placeholder = "Organizations" disabled = "disabled">
-                
+                            
                         <br>
                 
                             <a href = "#">
