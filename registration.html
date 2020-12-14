@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
+        
         <title>Adelphi eLounge</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel = "stylesheet" href="jquery-ui.css">
-		<link rel = "stylesheet" href = "elounge-css.css">
+		<link rel = "stylesheet" href = "updated_elounge-css.css">
         <link rel = "icon" href="images/au-logo.png">
+        
         <script>
+            
             function getValueMajor()
             {
                 var d = document.getElementById("Major-select");
@@ -32,8 +38,6 @@
                 document.getElementById("club").value=displaytext;
             }
             
-            
-            
             function showMinorList()
             {
                 var checkbox = document.getElementById("minor-check");
@@ -49,39 +53,113 @@
                     text.style.display = "none";
                 }
             }
-            </script>
-    </head>
-    <body class = "homepage-body">
-        <div id = "page-container">
-            <div id = "content-wrap">
-                <header id = "top-of-page">
             
-                <a href = "http://www.adelphi.edu">
-                <img src = "Adelphi_Wordmark_gold.png" id = "adelphi-logo">
-                </a>
-                <img src = "elounge-logo.png" id = "elounge-logo">
+            
+        </script>
+        
+        
+    </head>
+    
+    <body>
+    
+        <header class = "top-of-page">
+        
+            <div class = "top-bg">
+            
+            <a href = "http://www.adelphi.edu">
+            <img src = "images/Adelphi_Wordmark_gold.png" id = "adelphi-logo">
+            </a>
+            
+            <img src = "images/elounge-logo.png" id = "elounge-logo">
+                  
+                <div class = "text-bg">
+                
                 <h1 id = "homepage-head">
-                    Welcome to the lounge!
+                            
+                    AU eLounge
+                        
                 </h1>
+                        
                 <h2 id = "homepage-subhead">
-                    Get cozy, relax, and explore.
+                            
+                    Learn, study, connect, relax, explore.
+                        
                 </h2>
+                    
+                </div>
+                        
                 <br>
-                <hr id = "bar1">
-                </header>
-                <p1 id = "first" value = "">Please enter your First name:</p1>
-                <input type = "text" id = "first-name" placeholder = "First Name">
-                <br>
-                <p1 id = "last" value = "">Please enter your Last name:</p1>
-                <input type = "text" id = "last-name" placeholder = "Last Name">
-                <br>
-                <p1 id = "email" value = "">Please enter your school email:</p1>
-                <input type = "text" id = "school-email" placeholder = "School Email">
+                    
+            </div>
+        
+        
+        </header>
+        
+            <div class = "intro-form">
+                
+                <p id = "intro-text">
+                    
+                    Welcome to AU eLounge! Before we get started, please enter your information below so that we can best help you.
+                
+                </p>    
+                
+                <div class = "container">    
+                    
+                    <div class = "first-container">
+                
+                    
+                        <p1 id = "first" value = "">
+                    
+                            Please enter your First name:
+                
+                        </p1>
+                            
+                        <input type = "text" id = "first-name" placeholder = "First Name" required />
+                
+                    </div>
+                    
                 <br>
                 
-                <select id = "Major-select" onchange ="getValueMajor()" size = "7">
-                <option value = "">Select your major:</option>
-                <option value ="Undeclared">Undeclared</option>
+                    <div class = "second-container">
+                
+                        <p1 id = "last" value = "">
+                    
+                            Please enter your Last name:
+                
+                        </p1>
+                
+                        <input type = "text" id = "last-name" placeholder = "Last Name" required>
+            
+                    </div>    
+                    
+                <br>
+                
+                    <div class = "third-container">
+                
+                        <p1 id = "email" value = "">
+                    
+                            Please enter your school email:
+                
+                        </p1>
+                
+                        <input type = "text" id = "school-email" placeholder = "School Email" required>
+                
+                    </div>
+                    
+                </div>
+                
+            </div>
+        
+            <div class = "row no-gutters">
+        
+                <div class = "col no-gutters">
+            
+                    <div class = "leftside">
+                
+                    <select id = "Major-select" onchange ="getValueMajor()" size = "7">
+                        
+                        <option value = "">Select your major:</option>
+                        <option value ="Undeclared">Undeclared</option>
                         <option value ="Accounting">Accounting</option>
                         <option value ="Adolescenet-Childhood Education">Adolescenet/Childhood Education</option>
                         <option value ="Anthropology">Anthropology</option>
@@ -139,202 +217,260 @@
                         <option value ="Sport-Management">Sport Management</option>
                         <option value ="Statistics">Statistics</option>
                         <option value ="Theatre">Theatre</option>
-                </select>
                 
-                <br>
-                
-                <input type = "checkbox" id = "minor-check" onclick = "showMinorList()">
-                <label for="minor-check">Minor?</label>
-                <br>
-                <p id = "hide-list">
-                <select id = "Minor-select" onchange ="getValueMinor()" size = "7">
-                <option value = "">Select your minor:</option>
-                        <option value ="Accounting">Accounting</option>
-                        <option value ="Adolescenet-Childhood Education">Adolescenet/Childhood Education</option>
-                        <option value ="Anthropology">Anthropology</option>
-                        <option value ="Art-and-Design Education">Art & Design Education</option>
-                        <option value ="Art">Art</option>
-                        <option value ="Art-History">Art History</option>
-                        <option value ="Biochemistry">Biochemistry</option>
-                        <option value ="Biology">Biology</option>
-                        <option value ="Business">Business</option>
-                        <option value ="Business Analytics">Business-Analytics</option>
-                        <option value ="Chemistry">Chemistry</option>
-                        <option value ="Communication Disorders">Communication-Disorders</option>
-                        <option value ="Communications">Communications</option>
-                        <option value ="Computer-Science">Computer Science</option>
-                        <option value ="Criminal-Justice">Criminal Justice</option>
-                        <option value ="Dance">Dance</option>
-                        <option value ="Economics">Economics</option>
-                        <option value ="Emergency-Services">Emergency Services</option>
-                        <option value ="English">English</option>
-                        <option value ="Environmental-Science">Environmental Science</option>
-                        <option value ="Ethics-and-Public-Policy">Ethics & Public Policy</option>
-                        <option value ="Exercise-Science">Exercise Science</option>
-                        <option value ="Finance">Finance</option>
-                        <option value ="French">French</option>
-                        <option value ="General-Psychology">General Psychology</option>
-                        <option value ="Health-Sciences">Health Sciences</option>
-                        <option value ="History">History</option>
-                        <option value ="Information-Systems">Information Systems</option>
-                        <option value ="Interdisciplinary-Studies">Interdisciplinary Studies</option>
-                        <option value ="International-Relations">International Relations</option>
-                        <option value ="International-Studies">International Studies</option>
-                        <option value ="Latin-American-Studies">Latin American Studies</option>
-                        <option value ="Liberal-Arts">Liberal Arts</option>
-                        <option value ="Liberal-Arts-Pre-Nursing">Liberal Arts: Pre-Nursing</option>
-                        <option value ="Liberal-Studies">Liberal Studies</option>
-                        <option value ="Literature">Literature</option>
-                        <option value ="Management">Management</option>
-                        <option value ="Marketing">Marketing</option>
-                        <option value ="Mathematics">Mathematics</option>
-                        <option value ="Music">Music</option>
-                        <option value ="Music-Education">Music Education</option>
-                        <option value ="Natural-Sciences">Natural Sciences</option>
-                        <option value ="Nursing">Nursing</option>
-                        <option value ="Philosophy">Philosophy</option>
-                        <option value ="Physical-Activity-Studies">Physical Activity Studies</option>
-                        <option value ="Physical-Education">Physical Education</option>
-                        <option value ="Physics">Physics</option>
-                        <option value ="Political-Science">Political Science</option>
-                        <option value ="Psychology">Psychology</option>
-                        <option value ="RN-to-BS-in-Nursing">RN to BS in Nursing</option>
-                        <option value ="Social-Science">Social Science</option>
-                        <option value ="Social-Work">Social Work</option>
-                        <option value ="Sociology">Sociology</option>
-                        <option value ="Spanish">Spanish</option>
-                        <option value ="Sport-Management">Sport Management</option>
-                        <option value ="Statistics">Statistics</option>
-                        <option value ="Theatre">Theatre</option>
                     </select>
+                    
+                
+                    <br>
+                
+                    <input type = "checkbox" id = "minor-check" onclick = "showMinorList()">
+                    <label for="minor-check" id = "minor-label">Second Major/Minor?</label>
+                
+                    <br>
+                
+                    <p id = "hide-list">
+                
+                    <select id = "Minor-select" onchange ="getValueMinor()" size = "7">
+                        
+                        <option value = "">Select your Second Major/Minor:</option>
+                        <option value ="Accounting">Accounting</option>
+                        <option value ="Adolescenet-Childhood Education">Adolescenet/Childhood Education</option>
+                        <option value = "African-Black-and-Caribbean-Studies">African, Black & Caribbean Studies</option>
+                        <option value ="Anthropology">Anthropology</option>
+                        <option value ="Art-and-Design Education">Art & Design Education</option>
+                        <option value ="Art">Art</option>
+                        <option value ="Art-History">Art History</option>
+                        <option value ="Art-Therapy">Art Therapy</option>
+                        <option value = "Asian-Studies">Asian Studies</option>
+                        <option value ="Biochemistry">Biochemistry</option>
+                        <option value ="Biology">Biology</option>
+                        <option value ="Business">Business</option>
+                        <option value ="Business Analytics">Business-Analytics</option>
+                        <option value ="Chemistry">Chemistry</option>
+                        <option value ="Communication Disorders">Communication-Disorders</option>
+                        <option value ="Communications">Communications</option>
+                        <option value ="Computer-Science">Computer Science</option>
+                        <option value ="Criminal-Justice">Criminal Justice</option>
+                        <option value ="Dance">Dance</option>
+                        <option value ="Economics">Economics</option>
+                        <option value ="Emergency-Services">Emergency Services</option>
+                        <option value ="English">English</option>
+                        <option value ="Environmental-Science">Environmental Science</option>
+                        <option value ="Ethics-and-Public-Policy">Ethics & Public Policy</option>
+                        <option value ="Ethics-Law-and-Justice">Ethics, Law & Justice</option>
+                        <option value ="European-Studies">European Studies</option>
+                        <option value ="Exercise-Science">Exercise Science</option>
+                        <option value ="Finance">Finance</option>
+                        <option value ="Food-Studies">Food Studies</option>
+                        <option value ="French">French</option>
+                        <option value ="Gender-Studies">Gender Studies</option>
+                        <option value ="General-Psychology">General Psychology</option>
+                        <option value ="Health-Education">Health Education</option>
+                        <option value ="Health-Sciences">Health Sciences</option>
+                        <option value ="History">History</option>
+                        <option value ="Human-Resource-Management">Human Resource Management</option>
+                        <option value ="Information-Systems">Information Systems</option>
+                        <option value ="Interdisciplinary-Studies">Interdisciplinary Studies</option>
+                        <option value ="International-Relations">International Relations</option>
+                        <option value ="International-Studies">International Studies</option>'
+                        <option value ="Italian">Italian</option>
+                        <option value ="Latin-American-Studies">Latin American Studies</option>
+                        <option value ="Liberal-Arts">Liberal Arts</option>
+                        <option value ="Liberal-Arts-Pre-Nursing">Liberal Arts: Pre-Nursing</option>
+                        <option value ="Liberal-Studies">Liberal Studies</option>
+                        <option value ="Literature">Literature</option>
+                        <option value ="Management">Management</option>
+                        <option value ="Marketing">Marketing</option>
+                        <option value ="Mathematics">Mathematics</option>
+                        <option value ="Music">Music</option>
+                        <option value ="Music-Education">Music Education</option>
+                        <option value ="Natural-Sciences">Natural Sciences</option>
+                        <option value ="Nursing">Nursing</option>
+                        <option value ="Peace-Studies">Peace Studies</option>
+                        <option value ="Philosophy">Philosophy</option>
+                        <option value ="Physical-Activity-Studies">Physical Activity Studies</option>
+                        <option value ="Physical-Education">Physical Education</option>
+                        <option value ="Physics">Physics</option>
+                        <option value ="Political-Science">Political Science</option>
+                        <option value ="Psychology">Psychology</option>
+                        <option value ="Public-Health">Public Health</option>
+                        <option value ="RN-to-BS-in-Nursing">RN to BS in Nursing</option>
+                        <option value ="Social-Science">Social Science</option>
+                        <option value ="Social-Work">Social Work</option>
+                        <option value ="Social-Work-Child-and-Family-Studies">Social Work: Child and Family Studies</option>
+                        <option value ="Sociology">Sociology</option>
+                        <option value ="Spanish">Spanish</option>
+                        <option value ="Sport-Management">Sport Management</option>
+                        <option value ="Statistics">Statistics</option>
+                        <option value ="Theatre">Theatre</option>
+                        <option value ="Video-Game-Design">Video Game Design</option>
+                    
+                    </select>
+                
                 </p>
                 
-                <input type = "checkbox" id = "multiple-club-check" onclick = "multipleFunc()">
-                <label for="multiple-club-check">Multiple organizations?</label>
+                </div>
+                
+            </div>
+            
+            
+                <div class = "col no-gutters">
+                
+                    <div class = "rightside">
+                
+                        <input type = "checkbox" id = "multiple-club-check" onclick = "multipleFunc()">
+                <label for="multiple-club-check" id = "multiple-label">Multiple organizations?</label>
+                
                 <br>
+                
                 <select id = "Club-select" onchange ="getValueClub()" size = "7">
-                <option value = "">Select your organizations you are in/are interested in:</option>
-                        <option value ="Accounting-Society">Accounting Society</option>
-                        <option value ="Adelphi-Christian-Fellowship">Adelphi Christian Fellowship</option>
-                        <option value ="Adelphi-College-Republicans-National-Committee-Chapter">Adelphi College Republicans National Committee Chapter</option>
-                        <option value ="Adelphi-Gives-Back">Adelphi Gives Back</option>
-                        <option value ="Adelphi-Mock-Trial">Adelphi Mock Trial</option>
-                        <option value ="Adelphi-University-ACM-Student-Chapter">Adelphi University ACM Student Chapter</option>
-                        <option value ="Adelphi-University-Student-Nurses-Association">Adelphi University Student Nurses Association</option>
-                        <option value ="African-Student-Association">African Student Association</option>
-                        <option value ="Alcohol-and-Other-Drugs-Program">Alcohol and Other Drugs Program</option>
-                        <option value ="Alpha-Epsilon-Phi">Alpha Epsilon Phi</option>
-                        <option value ="Alpha-Kappa-Alpha-Sorority">Alpha Kappa Alpha Sorority, Inc.</option>
-                        <option value ="Alpha-Phi-Alpha-Fraternity">Alpha Phi Alpha Fraternity, Inc.</option>
-                        <option value ="American-Sign-Language-Club">American Sign Language Club</option>
-                        <option value ="Anthropology-Club">Anthropology Club</option>
-                        <option value ="APICS-AU">APICS AU</option>
-                        <option value ="Arts-Empower-Adelphi">Arts Empower Adelphi</option>
-                        <option value ="AU-Bhangra">AU Bhangra</option>
-                        <option value ="AU-PAWS-Web-Radio">AU PAWS Web Radio</option>
-                        <option value ="Biology-Club">Biology Club</option>
-                        <option value ="Black-Students-United">Black Students United</option>
-                        <option value ="CALIBER">C.A.L.I.B.E.R.</option>
-                        <option value ="Caribbean-Students-Union">Caribbean Students Union</option>
-                        <option value ="Center-for-Student-Involvement">Center for Student Involvement</option>
-                        <option value ="Chabad-Jewish-Student-Group">Chabad Jewish Student Group</option>
-                        <option value ="Chemistry-Club">Chemistry Club</option>
-                        <option value ="Circle-K-International">Circle K International</option>
-                        <option value ="Commuter-Assistant-Program">Commuter Assistant Program</option>
-                        <option value ="Commuter-Student-Organization">Commuter Student Organization</option>
-                        <option value ="Delta-Chi">Delta Chi</option>
-                        <option value ="Delta-Delta-Delta">Delta Delta Delta</option>
-                        <option value ="Delta-Gamma">Delta Gamma</option>
-                        <option value ="Delta-Phi-Epsilon">Delta Phi Epsilon</option>
-                        <option value ="Delta-Sigma-Pi">Delta Sigma Pi</option>
-                        <option value ="Delta-Sigma-Theta-Sorority">Delta Sigma Theta Sorority, Inc.</option>
-                        <option value ="Environmental-Action-Coalition">Environmental Action Coalition</option>
-                        <option value ="Females-Of-Culture-United-for-Success">Females Of Culture United for Success</option>
-                        <option value ="Feminist-Alliance">Feminist Alliance</option>
-                        <option value ="Future-Teachers-Association">Future Teachers Association</option>
-                        <option value ="Gamers-and-Artists-Making-Epic-Software">Gamers & Artists Making Epic Software</option>
-                        <option value ="Gamma-Beta-Phi">Gamma Beta Phi</option>
-                        <option value ="Gamma-Sigma-Alpha">Gamma Sigma Alpha</option>
-                        <option value ="Gender-and-Sexuality-Alliance">Gender and Sexuality Alliance</option>
-                        <option value ="Global-Medical-Brigades">Global Medical Brigades</option>
-                        <option value ="Graduate-Student-Council">Graduate Student Council</option>
-                        <option value ="Greek-Life-and-Social-Fellowships">Greek Life & Social Fellowships</option>
-                        <option value ="Health-Outreach-and-Promotion">Health Outreach & Promotion</option>
-                        <option value ="Hellenic-Society-Club">Hellenic Society Club</option>
-                        <option value ="Her-Campus">Her Campus</option>
-                        <option value ="Evolution">Hip Hop Dance "Evolution"</option>
-                        <option value ="Honors-College-Student-Council">Honors College Student Council</option>
-                        <option value ="Inter-Greek-Council">Inter-Greek Council</option>
-                        <option value ="Interfaith-Center">Interfaith Center</option>
-                        <option value ="Interfraternity-Council">Interfraternity Council</option>
-                        <option value ="International-Services">International Services</option>
-                        <option value ="International-Student-Society">International Student Society</option>
-                        <option value ="Investment-Club">Investment Club</option>
-                        <option value ="Iota-Nu-Delta">Iota Nu Delta</option>
-                        <option value ="Japanese-Entertainment-and-Culture-Club">Japanese Entertainment and Culture Club</option>
-                        <option value ="Kappa-Phi-Gamma-Sorority">Kappa Phi Gamma Sorority, Inc.</option>
-                        <option value ="Kappa-Sigma">Kappa Sigma</option>
-                        <option value ="Korean-Entertainment-Club">Korean Entertainment Club</option>
-                        <option value ="Lambda-Upsilon-Lambda">Lambda Upsilon Lambda</option>
-                        <option value ="Latino-Student-Association">Latino Student Association</option>
-                        <option value ="Leadership-Certificate-Program">Leadership Certificate Program</option>
-                        <option value ="Levermore-Global-Scholars-Student-Leadership-Council">Levermore Global Scholars Student Leadership Council</option>
-                        <option value ="Manhattan-Center-School-of-Social-Work">Manhattan Center: School of Social Work</option>
-                        <option value ="Mosaic">Mosaic</option>
-                        <option value ="Multicultural-Greek-and-Fellowship-Council">Multicultural Greek and Fellowship Council</option>
-                        <option value ="Multilingual-Experience-Club">Multilingual Experience Club</option>
-                        <option value ="Muslim-Student-Association">Muslim Student Association</option>
-                        <option value ="National-Society-of-Collegiate-Scholars">National Society of Collegiate Scholars</option>
-                        <option value ="National-Student-Speech-Language-Hearing-Association">National Student Speech-Language-Hearing Association</option>
-                        <option value ="Neuroscience-Society-of-Adelphi">Neuroscience Society of Adelphi</option>
-                        <option value ="Newman-Club">Newman Club (Catholic Campus Parish)</option>
-                        <option value ="Nova-Network-Modeling-Club">Nova Network Modeling Club</option>
-                        <option value ="Order-of-Omega">Order of Omega</option>
-                        <option value ="Panhellenic-Association">Panhellenic Association</option>
-                        <option value ="Peer-Assistant-Leader">Peer Assistant Leader</option>
-                        <option value ="Phi-Mu">Phi Mu</option>
-                        <option value ="Phi-Sigma-Kappa">Phi Sigma Kappa</option>
-                        <option value ="Phi-Sigma-Sigma">Phi Sigma Sigma</option>
-                        <option value ="Philosophy-Club">Philosophy Club</option>
-                        <option value ="Physics-Club">Physics Club</option>
-                        <option value ="Pi-Lambda-Phi">Pi Lambda Phi</option>
-                        <option value ="Polish-American-Organization-of-Leaders-and-Kultura">Polish American Organization of Leaders and Kultura</option>
-                        <option value ="Pre-Professional-Club">Pre-Professional Club</option>
-                        <option value ="Psychology-Club">Psychology Club</option>
-                        <option value ="Relay-For-Life">Relay For Life</option>
-                        <option value ="Resident-Student-Association">Resident Student Association</option>
-                        <option value ="Rho-Lambda">Rho Lambda</option>
-                        <option value ="SGA-Treasurers">SGA Treasurers</option>
-                        <option value ="Sigma-Delta-Tau">Sigma Delta Tau</option>
-                        <option value ="Sigma-Lambda-Upsilon">Sigma Lambda Upsilon/Señoritas Latinas Unidas Sorority, Inc.</option>
-                        <option value ="Sikhs-United">Sikhs United</option>
-                        <option value ="Social-Work-Action-Gateway">Social Work Action Gateway</option>
-                        <option value ="South-Asian-Student-Association">South Asian Student Association</option>
-                        <option value ="Student-Activities-Board">Student Activities Board</option>
-                        <option value ="Student-Alumni-Council">Student Alumni Council</option>
-                        <option value ="Student-Appreciation-and-Recognition-of-Adelphi-Pinoys">Student Appreciation and Recognition of Adelphi Pinoys</option>
-                        <option value ="Student-Government-Association">Student Government Association</option>
-                        <option value ="Swing-Phi-Swing">Swing Phi Swing Social Fellowship, Inc.</option>
-                        <option value ="The-Delphian">The Delphian</option>
-                        <option value ="The-Physician-Assistant-Club">The Physician Assistant Club</option>
-                        <option value ="UNA-USA">United Nations Association-USA Adelphi University Chapter</option>
+        
+                    <option value = "">Select your organizations you are in/are interested in:</option>
+                    <option value ="Accounting-Society">Accounting Society</option>
+                    <option value ="Adelphi-Christian-Fellowship">Adelphi Christian Fellowship</option>
+                    <option value ="Adelphi-College-Republicans-National-Committee-Chapter">Adelphi College Republicans National Committee Chapter</option>
+                    <option value ="Adelphi-Gives-Back">Adelphi Gives Back</option>
+                    <option value ="Adelphi-Mock-Trial">Adelphi Mock Trial</option>
+                    <option value ="Adelphi-University-ACM-Student-Chapter">Adelphi University ACM Student Chapter</option>
+                    <option value ="Adelphi-University-Student-Nurses-Association">Adelphi University Student Nurses Association</option>
+                    <option value ="African-Student-Association">African Student Association</option>
+                    <option value ="Alcohol-and-Other-Drugs-Program">Alcohol and Other Drugs Program</option>
+                    <option value ="Alpha-Epsilon-Phi">Alpha Epsilon Phi</option>
+                    <option value ="Alpha-Kappa-Alpha-Sorority">Alpha Kappa Alpha Sorority, Inc.</option>
+                    <option value ="Alpha-Phi-Alpha-Fraternity">Alpha Phi Alpha Fraternity, Inc.</option>
+                    <option value ="American-Sign-Language-Club">American Sign Language Club</option>
+                    <option value ="Anthropology-Club">Anthropology Club</option>
+                    <option value ="APICS-AU">APICS AU</option>
+                    <option value ="Arts-Empower-Adelphi">Arts Empower Adelphi</option>
+                    <option value ="AU-Bhangra">AU Bhangra</option>
+                    <option value ="AU-PAWS-Web-Radio">AU PAWS Web Radio</option>
+                    <option value ="Biology-Club">Biology Club</option>
+                    <option value ="Black-Students-United">Black Students United</option>
+                    <option value ="CALIBER">C.A.L.I.B.E.R.</option>
+                    <option value ="Caribbean-Students-Union">Caribbean Students Union</option>
+                    <option value ="Center-for-Student-Involvement">Center for Student Involvement</option>
+                    <option value ="Chabad-Jewish-Student-Group">Chabad Jewish Student Group</option>
+                    <option value ="Chemistry-Club">Chemistry Club</option>
+                    <option value ="Circle-K-International">Circle K International</option>
+                    <option value ="Commuter-Assistant-Program">Commuter Assistant Program</option>
+                    <option value ="Commuter-Student-Organization">Commuter Student Organization</option>
+                    <option value ="Delta-Chi">Delta Chi</option>
+                    <option value ="Delta-Delta-Delta">Delta Delta Delta</option>
+                    <option value ="Delta-Gamma">Delta Gamma</option>
+                    <option value ="Delta-Phi-Epsilon">Delta Phi Epsilon</option>
+                    <option value ="Delta-Sigma-Pi">Delta Sigma Pi</option>
+                    <option value ="Delta-Sigma-Theta-Sorority">Delta Sigma Theta Sorority, Inc.</option>
+                    <option value ="Environmental-Action-Coalition">Environmental Action Coalition</option>
+                    <option value ="Females-Of-Culture-United-for-Success">Females Of Culture United for Success</option>
+                    <option value ="Feminist-Alliance">Feminist Alliance</option>
+                    <option value ="Future-Teachers-Association">Future Teachers Association</option>
+                    <option value ="Gamers-and-Artists-Making-Epic-Software">Gamers & Artists Making Epic Software</option>
+                    <option value ="Gamma-Beta-Phi">Gamma Beta Phi</option>
+                    <option value ="Gamma-Sigma-Alpha">Gamma Sigma Alpha</option>
+                    <option value ="Gender-and-Sexuality-Alliance">Gender and Sexuality Alliance</option>
+                    <option value ="Global-Medical-Brigades">Global Medical Brigades</option>
+                    <option value ="Graduate-Student-Council">Graduate Student Council</option>
+                    <option value ="Greek-Life-and-Social-Fellowships">Greek Life & Social Fellowships</option>
+                    <option value ="Health-Outreach-and-Promotion">Health Outreach & Promotion</option>
+                    <option value ="Hellenic-Society-Club">Hellenic Society Club</option>
+                    <option value ="Her-Campus">Her Campus</option>
+                    <option value ="Evolution">Hip Hop Dance "Evolution"</option>
+                    <option value ="Honors-College-Student-Council">Honors College Student Council</option>
+                    <option value ="Inter-Greek-Council">Inter-Greek Council</option>
+                    <option value ="Interfaith-Center">Interfaith Center</option>
+                    <option value ="Interfraternity-Council">Interfraternity Council</option>
+                    <option value ="International-Services">International Services</option>
+                    <option value ="International-Student-Society">International Student Society</option>
+                    <option value ="Investment-Club">Investment Club</option>
+                    <option value ="Iota-Nu-Delta">Iota Nu Delta</option>
+                    <option value ="Japanese-Entertainment-and-Culture-Club">Japanese Entertainment and Culture Club</option>
+                    <option value ="Kappa-Phi-Gamma-Sorority">Kappa Phi Gamma Sorority, Inc.</option>
+                    <option value ="Kappa-Sigma">Kappa Sigma</option>
+                    <option value ="Korean-Entertainment-Club">Korean Entertainment Club</option>
+                    <option value ="Lambda-Upsilon-Lambda">Lambda Upsilon Lambda</option>
+                    <option value ="Latino-Student-Association">Latino Student Association</option>
+                    <option value ="Leadership-Certificate-Program">Leadership Certificate Program</option>
+                    <option value ="Levermore-Global-Scholars-Student-Leadership-Council">Levermore Global Scholars Student Leadership Council</option>
+                    <option value ="Manhattan-Center-School-of-Social-Work">Manhattan Center: School of Social Work</option>
+                    <option value ="Mosaic">Mosaic</option>
+                    <option value ="Multicultural-Greek-and-Fellowship-Council">Multicultural Greek and Fellowship Council</option>
+                    <option value ="Multilingual-Experience-Club">Multilingual Experience Club</option>
+                    <option value ="Muslim-Student-Association">Muslim Student Association</option>
+                    <option value ="National-Society-of-Collegiate-Scholars">National Society of Collegiate Scholars</option>
+                    <option value ="National-Student-Speech-Language-Hearing-Association">National Student Speech-Language-Hearing Association</option>
+                    <option value ="Neuroscience-Society-of-Adelphi">Neuroscience Society of Adelphi</option>
+                    <option value ="Newman-Club">Newman Club (Catholic Campus Parish)</option>
+                    <option value ="Nova-Network-Modeling-Club">Nova Network Modeling Club</option>
+                    <option value ="Order-of-Omega">Order of Omega</option>
+                    <option value ="Panhellenic-Association">Panhellenic Association</option>
+                    <option value ="Peer-Assistant-Leader">Peer Assistant Leader</option>
+                    <option value ="Phi-Mu">Phi Mu</option>
+                    <option value ="Phi-Sigma-Kappa">Phi Sigma Kappa</option>
+                    <option value ="Phi-Sigma-Sigma">Phi Sigma Sigma</option>
+                    <option value ="Philosophy-Club">Philosophy Club</option>
+                    <option value ="Physics-Club">Physics Club</option>
+                    <option value ="Pi-Lambda-Phi">Pi Lambda Phi</option>
+                    <option value ="Polish-American-Organization-of-Leaders-and-Kultura">Polish American Organization of Leaders and Kultura</option>
+                    <option value ="Pre-Professional-Club">Pre-Professional Club</option>
+                    <option value ="Psychology-Club">Psychology Club</option>
+                    <option value ="Relay-For-Life">Relay For Life</option>
+                    <option value ="Resident-Student-Association">Resident Student Association</option>
+                    <option value ="Rho-Lambda">Rho Lambda</option>
+                    <option value ="SGA-Treasurers">SGA Treasurers</option>
+                    <option value ="Sigma-Delta-Tau">Sigma Delta Tau</option>
+                    <option value ="Sigma-Lambda-Upsilon">Sigma Lambda Upsilon/Señoritas Latinas Unidas Sorority, Inc.</option>
+                    <option value ="Sikhs-United">Sikhs United</option>
+                    <option value ="Social-Work-Action-Gateway">Social Work Action Gateway</option>
+                    <option value ="South-Asian-Student-Association">South Asian Student Association</option>
+                    <option value ="Student-Activities-Board">Student Activities Board</option>
+                    <option value ="Student-Alumni-Council">Student Alumni Council</option>
+                    <option value ="Student-Appreciation-and-Recognition-of-Adelphi-Pinoys">Student Appreciation and Recognition of Adelphi Pinoys</option>
+                    <option value ="Student-Government-Association">Student Government Association</option>
+                    <option value ="Swing-Phi-Swing">Swing Phi Swing Social Fellowship, Inc.</option>
+                    <option value ="The-Delphian">The Delphian</option>
+                    <option value ="The-Physician-Assistant-Club">The Physician Assistant Club</option>
+                    <option value ="UNA-USA">United Nations Association-USA Adelphi University Chapter</option>
+                
                 </select>
                 
                 <br>
-                <input type = "text" id = "major" placeholder = "Major" disabled = "disabled">
-                <br>
-                <input type = "text" id = "minor" placeholder = "Minor" disabled = "disabled">
-                <br>
-                <input type = "text" id = "club" placeholder = "Organizations" disabled = "disabled">
-                <br>
-                <input type = "button" id = "submit" value = "Submit!" onclick = "">
-            </div>    
-        </div>
+        
+                        <div class = "selected-form">
+                
+                            <input type = "text" id = "major" placeholder = "Major" disabled = "disabled">
+                
+                        <br>
+                
+                            <input type = "text" id = "minor" placeholder = "Minor" disabled = "disabled">
+                
+                        <br>
+                
+                            <input type = "text" id = "club" placeholder = "Organizations" disabled = "disabled">
+                
+                        <br>
+                
+                            <a href = "#">
+                                <input type = "button" id = "submit" value = "Submit!" onclick = "">
+                            </a>
+                
+                        </div>
+                    
+                    </div>
+            
+                </div>
+                
+            </div>
+                 
     </body>
-    <footer id = "homepage-footer">
+    
+     <footer id = "homepage-footer">
+    
         <p><a href = "http://www.adelphi.edu">© Adelphi University</a></p>
+    
+        <script src = "jquery.js"></script>
+        <script src = "jquery-ui.js"></script>
+        <script src = "elounge-js.js"></script>
+         
     </footer>
-    <script src = "jquery.js"></script>
-    <script src = "jquery-ui.js"></script>
-    <script src = "elounge-js.js"></script>
+    
 </html>
