@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<script src = "jquery.js"></script>
+    	<script src = "jquery-ui.js"></script>
+    	<script src = "elounge-js.js"></script>
+        <title>Adelphi eLounge</title>
+        <link rel = "stylesheet" href="jquery-ui.css">
+		<link rel = "stylesheet" href = "elounge-css.css">
+        <link rel = "icon" href="au-logo.png">
+        <script>
+            function getValueMajor()
+            {
+                var d = document.getElementById("Major-select");
+                var displaytext = d.options[d.selectedIndex].text;
+                document.getElementById("major").value=displaytext;
+            }
+            
+            function multipleFunc()
+            {
+                document.getElementById("Club-select").multiple=true;
+            }
+            
+            function getValueClub()
+            {
+                var d = document.getElementById("Club-select");
+                var displaytext = d.options[d.selectedIndex].text;
+                document.getElementById("club").value=displaytext;
+            }
+            
+            
+            
+            function showMinorList()
+            {
+                var checkbox = document.getElementById("minor-check");
+                
+                var text = document.getElementById("hide-list");
+                
+                if(checkbox.checked == true)
+                {
+                    text.style.display = "block";
+                }
+                else
+                {
+                    text.style.display = "none";
+                }
+            }
+            </script>
+
+            <script>
+            	 $( function() {
+    				$( "#selectable" ).selectable();
+  					} );
+  			</script>
+
+    </head>
+    <body class = "homepage-body">
+        <div id = "page-container">
+            <div id = "content-wrap">
+                <header id = "top-of-page">
+            
+                <a href = "http://www.adelphi.edu">
+                <img src = "Adelphi_Wordmark_gold.png" id = "adelphi-logo">
+                </a>
+                <img src = "elounge-logo copy.png" id = "elounge-logo">
+                <h1 id = "homepage-head">
+                    Welcome to the lounge!
+                </h1>
+                <h2 id = "homepage-subhead">
+                    Get cozy, relax, and explore.
+                </h2>
+                <br>
+                <hr id = "bar1">
+                </header>
+                
+                <br>
+                <h3 id = "homepage-subhead">
+                    Choose a group page to access.
+                </h3>
+                <br>
+                <h4 class = "group-type">
+                    MAJORS
+                </h4>
+                <br>
+                <center>
+                <ol id="selectable">
+                        <li class="ui-widget-content">Accounting</li>
+                        <li class="ui-widget-content">Adolescent/Childhood Education</li>
+                        <li class="ui-widget-content">Anthropology</li>
+                        <li class="ui-widget-content">Art & Design Education</li>
+                        <li class="ui-widget-content">Art</li>
+                        <li class="ui-widget-content">Art History</li>
+                        <li class="ui-widget-content">Biochemistry</li>
+                        <li class="ui-widget-content">Biology</li>
+                        <li class="ui-widget-content">Business</li>
+                        <li class="ui-widget-content">Business-Analytics</li>
+                        <li class="ui-widget-content">Chemistry</li>
+                        <li class="ui-widget-content">Communication-Disorders</li>
+                        <li class="ui-widget-content">Communications</li>
+                        <li class="ui-widget-content">Computer Science</li>
+                        <li class="ui-widget-content">Criminal Justice</li>
+                        <li class="ui-widget-content">Dance</li>
+                        <li class="ui-widget-content">Economics</li>
+                        <li class="ui-widget-content">Emergency Services</li>
+                        <li class="ui-widget-content">English</li>
+                        <li class="ui-widget-content">Environmental Science</li>
+                        <li class="ui-widget-content">Ethics & Public Policy</li>
+                        <li class="ui-widget-content">Exercise Science</li>
+                        <li class="ui-widget-content">Finance</li>
+                        <li class="ui-widget-content">French</li>
+                        <li class="ui-widget-content">General Psychology</li>
+                        <li class="ui-widget-content">Health Sciences</li>
+                        <li class="ui-widget-content">History</li>
+                        <li class="ui-widget-content">Information Systems</li>
+                        <li class="ui-widget-content">Interdisciplinary Studies</li>
+                        <li class="ui-widget-content">International Relations</li>
+                        <li class="ui-widget-content">International Studies</li>
+                        <li class="ui-widget-content">Latin American Studies</li>
+                        <li class="ui-widget-content">Liberal Arts</li>
+                        <li class="ui-widget-content">Liberal Arts: Pre-Nursing</li>
+                        <li class="ui-widget-content">Liberal Studies</li>
+                        <li class="ui-widget-content">Literature</li>
+                        <li class="ui-widget-content">Management</li>
+                        <li class="ui-widget-content">Marketing</li>
+                        <li class="ui-widget-content">Mathematics</li>
+                        <li class="ui-widget-content">Music</li>
+                        <li class="ui-widget-content">Music Education</li>
+                        <li class="ui-widget-content">Natural Sciences</li>
+                        <li class="ui-widget-content">Nursing</li>
+                        <li class="ui-widget-content">Philosophy</li>
+                        <li class="ui-widget-content">Physical Activity Studies</li>
+                        <li class="ui-widget-content">Physical Education</li>
+                        <li class="ui-widget-content">Physics</li>
+                        <li class="ui-widget-content">Political Science</li>
+                        <li class="ui-widget-content">Psychology</li>
+                        <li class="ui-widget-content">RN to BS in Nursing</li>
+                        <li class="ui-widget-content">Social Science</li>
+                        <li class="ui-widget-content">Social Work</li>
+                        <li class="ui-widget-content">Sociology</li>
+                        <li class="ui-widget-content">Spanish</li>
+                        <li class="ui-widget-content">Sport Management</li>
+                        <li class="ui-widget-content">Statistics</li>
+                        <li class="ui-widget-content">Theatre</li>
+                </ol>
+                <br>
+                
+                <br>
+                <h4 class = "group-type">
+                    CLUBS
+                </h4>
+                <br>
+                <ol id="selectable">
+                        <li class="ui-widget-content">Accounting Society</li>
+                        <li class="ui-widget-content">Adelphi Christian Fellowship</li>
+                        <li class="ui-widget-content">Adelphi College Republicans National Committee Chapter</li>
+                        <li class="ui-widget-content">Adelphi Gives Back</li>
+                        <li class="ui-widget-content">Adelphi Mock Trial</li>
+                        <li class="ui-widget-content">Adelphi University ACM Student Chapter</li>
+                        <li class="ui-widget-content">Adelphi University Student Nurses Association</li>
+                        <li class="ui-widget-content">African Student Association</li>
+                        <li class="ui-widget-content">Alcohol and Other Drugs Program</li>
+                        <li class="ui-widget-content">Alpha Epsilon Phi</li>
+                        <li class="ui-widget-content">Alpha Kappa Alpha Sorority, Inc.</li>
+                        <li class="ui-widget-content">Alpha Phi Alpha Fraternity, Inc.</li>
+                        <li class="ui-widget-content">American Sign Language Club</li>
+                        <li class="ui-widget-content">Anthropology Club</li>
+                        <li class="ui-widget-content">APICS AU</li>
+                        <li class="ui-widget-content">Arts Empower Adelphi</li>
+                        <li class="ui-widget-content">AU Bhangra</li>
+                        <li class="ui-widget-content">AU PAWS Web Radio</li>
+                        <li class="ui-widget-content">Biology Club</li>
+                        <li class="ui-widget-content">Black Students United</li>
+                        <li class="ui-widget-content">C.A.L.I.B.E.R.</li>
+                        <li class="ui-widget-content">Caribbean Students Union</li>
+                        <li class="ui-widget-content">Center for Student Involvement</li>
+                        <li class="ui-widget-content">Chabad Jewish Student Group</li>
+                        <li class="ui-widget-content">Chemistry Club</li>
+                       	<li class="ui-widget-content">Circle K International</li>
+                        <li class="ui-widget-content">Commuter Assistant Program</li>
+                       	<li class="ui-widget-content">Commuter Student Organization</li>
+                        <li class="ui-widget-content">Delta Chi</li>
+                        <li class="ui-widget-content">Delta Delta Delta</li>
+                        <li class="ui-widget-content">Delta Gamma</li>
+                        <li class="ui-widget-content">Delta Phi Epsilon</li>
+                        <li class="ui-widget-content">Delta Sigma Pi</li>
+                        <li class="ui-widget-content">Delta Sigma Theta Sorority, Inc.</li>
+                        <li class="ui-widget-content">Environmental Action Coalition</li>
+                        <li class="ui-widget-content">Females Of Culture United for Success</li>
+                        <li class="ui-widget-content">Feminist Alliance</li>
+                        <li class="ui-widget-content">Future Teachers Association</li>
+                        <li class="ui-widget-content">Gamers & Artists Making Epic Software</li>
+                        <li class="ui-widget-content">Gamma Beta Phi</li>
+                        <li class="ui-widget-content">Gamma Sigma Alpha</li>
+                        <li class="ui-widget-content">Gender and Sexuality Alliance</li>
+                        <li class="ui-widget-content">Global Medical Brigades</li>
+                        <li class="ui-widget-content">Graduate Student Council</li>
+                        <li class="ui-widget-content">Greek Life & Social Fellowships</li>
+                        <li class="ui-widget-content">Health Outreach & Promotion</li>
+                        <li class="ui-widget-content">Hellenic Society Club</li>
+                        <li class="ui-widget-content">Her Campus</li>
+                        <li class="ui-widget-content">Hip Hop Dance "Evolution"</li>
+                        <li class="ui-widget-content">Honors College Student Council</li>
+                        <li class="ui-widget-content">Inter-Greek Council</li>
+                        <li class="ui-widget-content">Interfaith Center</li>
+                        <li class="ui-widget-content">Interfraternity Council</li>
+                        <li class="ui-widget-content">International Services</li>
+                        <li class="ui-widget-content">International Student Society</li>
+                        <li class="ui-widget-content">Investment Club</li>
+                        <li class="ui-widget-content">Iota Nu Delta</li>
+                        <li class="ui-widget-content">Japanese Entertainment and Culture Club</li>
+                        <li class="ui-widget-content">Kappa Phi Gamma Sorority, Inc.</li>
+                        <li class="ui-widget-content">Kappa Sigma</li>
+                        <li class="ui-widget-content">Korean Entertainment Club</li>
+                        <li class="ui-widget-content">Lambda Upsilon Lambda</li>
+                        <li class="ui-widget-content">Latino Student Association</li>
+                        <li class="ui-widget-content">Leadership Certificate Program</li>
+                        <li class="ui-widget-content">Levermore Global Scholars Student Leadership Council</li>
+                        <li class="ui-widget-content">Manhattan Center: School of Social Work</li>
+                        <li class="ui-widget-content">Mosaic</li>
+                        <li class="ui-widget-content">Multicultural Greek and Fellowship Council</li>
+                        <li class="ui-widget-content">Multilingual Experience Club</li>
+                        <li class="ui-widget-content">Muslim Student Association</li>
+                        <li class="ui-widget-content">National Society of Collegiate Scholars</li>
+                        <li class="ui-widget-content">National Student Speech-Language-Hearing Association</li>
+                        <li class="ui-widget-content">Neuroscience Society of Adelphi</li>
+                        <li class="ui-widget-content">Newman Club (Catholic Campus Parish)</li>
+                        <li class="ui-widget-content">Nova Network Modeling Club</li>
+                        <li class="ui-widget-content">Order of Omega</li>
+                        <li class="ui-widget-content">Panhellenic Association</li>
+                        <li class="ui-widget-content">Peer Assistant Leader</li>
+                        <li class="ui-widget-content">Phi Mu</li>
+                        <li class="ui-widget-content">Phi Sigma Kappa</li>
+                        <li class="ui-widget-content">Phi Sigma Sigma</li>
+                        <li class="ui-widget-content">Philosophy Club</li>
+                        <li class="ui-widget-content">Physics Club</li>
+                        <li class="ui-widget-content">Pi Lambda Phi</li>
+                        <li class="ui-widget-content">Polish American Organization of Leaders and Kultura</li>
+                        <li class="ui-widget-content">Pre-Professional Club</li>
+                        <li class="ui-widget-content">Psychology Club</li>
+                        <li class="ui-widget-content">Relay For Life</li>
+                        <li class="ui-widget-content">Resident Student Association</li>
+                        <li class="ui-widget-content">Rho Lambda</li>
+                        <li class="ui-widget-content">SGA Treasurers</li>
+                        <li class="ui-widget-content">Sigma Delta Tau</li>
+                        <li class="ui-widget-content">Sigma Lambda Upsilon/Señoritas Latinas Unidas Sorority, Inc.</li>
+                        <li class="ui-widget-content">Sikhs United</li>
+                        <li class="ui-widget-content">Social Work Action Gateway</li>
+                        <li class="ui-widget-content">South Asian Student Association</li>
+                        <li class="ui-widget-content">Student Activities Board</li>
+                        <li class="ui-widget-content">Student Alumni Council</li>
+                       	<li class="ui-widget-content">Student Appreciation and Recognition of Adelphi Pinoys</li>
+                        <li class="ui-widget-content">Student Government Association</li>
+                        <li class="ui-widget-content">Swing Phi Swing Social Fellowship, Inc.</li>
+                        <li class="ui-widget-content">The Delphian</li>
+                        <li class="ui-widget-content">The Physician Assistant Club</li>
+                        <li class="ui-widget-content">United Nations Association-USA Adelphi University Chapter</li>
+                </ol>
+                </center>
+                <br>
+            </div>    
+        </div>
+    </body>
+    <footer id = "homepage-footer">
+        <p><a href = "http://www.adelphi.edu">© Adelphi University</a></p>
+    </footer>
+</html>
